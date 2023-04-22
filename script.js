@@ -26,7 +26,35 @@ const videos = [
 	},
   {
     title: "Tower of Fantasy - DON'T MAKE THESE MISTAKES!!!",
-    src: "https://youtu.be/zejEqoB23Xg"
+    src: "https://www.youtube.com/embed/zejEqoB23Xg"
+  },
+  {
+title: "Travis Scott - goosebumps ft. Kendrick Lamar",
+src: "https://www.youtube.com/embed/xtsn5OLWV1k"
+},
+{
+title: "Marshmello - Alone (Official Music Video)",
+src: "https://www.youtube.com/embed/0uISYKI3ymk"
+},
+{
+title: "Calvin Harris - This Is What You Came For (Official Video) ft. Rihanna",
+src: "https://www.youtube.com/embed/nHh_PCUOQw4"
+},
+{
+title: "The Chainsmokers & Coldplay - Something Just Like This (Lyric)",
+src: "https://www.youtube.com/embed/GfdTfeWkptk"
+},
+{
+title: "Daft Punk - Get Lucky (Official Audio) ft. Pharrell Williams, Nile Rodgers",
+src: "https://www.youtube.com/embed/UV3R7eKqNFI"
+},
+{
+title: "Ed Sheeran - Thinking Out Loud [Official Video]",
+src: "https://www.youtube.com/embed/56h0lNdO-Kk"
+},
+{
+title: "Camila Cabello - Havana ft. Young Thug [Official Video]",
+src: "https://www.youtube.com/embed/kX3nB4PpJko"
   }
 ];
 
@@ -42,4 +70,10 @@ iframe.allowfullscreen = true;
 
 // Adiciona o vídeo ao contêiner na página HTML
 const container = document.getElementById("video-container");
+container.appendChild(iframe);
+const container1 = document.getElementById("video-container1");
+container.appendChild(iframe);
+const container2 = document.getElementById("video-container2");
+container.appendChild(iframe);
+const container3 = document.getElementById("video-container3");
 container.appendChild(iframe);
