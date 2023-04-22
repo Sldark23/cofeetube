@@ -24,6 +24,10 @@ const videos = [
 		title: "glamrocks react totheir all aftonstheory • tw in desc • og ✋😩",
 		src: "https://www.youtube.com/embed/ClKp5zIj3yc"
 	},
+  {
+    title: "Tower of Fantasy - DON'T MAKE THESE MISTAKES!!!",
+    src: "https://youtu.be/zejEqoB23Xg"
+  }
 ];
 
 // Seleciona um vídeo aleatório da lista
