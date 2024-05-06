@@ -59,14 +59,20 @@ const videos = [
 ];
 
 // Função para exibir vídeos aleatórios na tela
-function exibirVideosAleatorios() {
+function exibirVideosAleatorios(videosList) {
   const container1 = document.getElementById("video-container1");
   const container2 = document.getElementById("video-container2");
   const container3 = document.getElementById("video-container3");
   const container4 = document.getElementById("video-container4");
 
+  // Limpa os contêineres antes de exibir novos vídeos
+  container1.innerHTML = "";
+  container2.innerHTML = "";
+  container3.innerHTML = "";
+  container4.innerHTML = "";
+
   // Embaralha a lista de vídeos
-  const shuffledVideos = videos.sort(() => Math.random() - 0.5).slice(0, 4);
+  const shuffledVideos = videosList.sort(() => Math.random() - 0.5).slice(0, 4);
 
   // Exibe os vídeos nos contêineres
   for (let i = 0; i < shuffledVideos.length; i++) {
@@ -90,5 +96,16 @@ function exibirVideosAleatorios() {
   }
 }
 
-// Chamada da função para exibir vídeos aleatórios
-exibirVideosAleatorios();
+// Função para pesquisar vídeos
+function pesquisarVideos() {
+  const searchTerm = document.getElementById("search-input").value.toLowerCase();
+
+  // Filtra os vídeos com base no termo de pesquisa
+  const filteredVideos = videos.filter(video => video.title.toLowerCase().includes(searchTerm));
+
+  // Exibe os vídeos filtrados
+  exibirVideosAleatorios(filteredVideos);
+}
+
+// Chamada inicial para exibir vídeos aleatórios ao carregar a página
+exibirVideosAleatorios(videos);
