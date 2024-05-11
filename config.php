@@ -1,10 +1,9 @@
 <?php
 // Dados de conexão com o banco de dados PostgreSQL
-$host = 'ep-morning-breeze-a46onhqn-pooler.us-east-1.aws.neon.tech';
-$port = '5432';
+$host = 'localhodt';
 $dbname = 'verceldb';
 $user = 'default';
-$password = 'BMy9dFR8ncmA';
+$password = 'fer272743!';
 
 // Conectar ao banco de dados PostgreSQL
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
