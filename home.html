@@ -21,6 +21,7 @@
   <div id="video-container2"></div>
   <div id="video-container3"></div>
   <div id="video-container4"></div>
+  <div id="video-container5"></div>
 
   <!-- Input para pesquisa -->
   <input type="text" id="search-input" placeholder="Pesquisar vídeos">
@@ -32,7 +33,7 @@
     // Função para fazer a requisição do arquivo JSON e exibir vídeos aleatórios
     async function fetchAndDisplayRandomVideos() {
       try {
-        const response = await fetch('https://raw.githubusercontent.com/Sldark23/Lista-de-v-deo-Coffetube/main/v%C3%ADdeos.json'); // Substitua 'URL_DO_SEU_ARQUIVO_JSON' pela URL real do seu arquivo JSON
+        const response = await fetch('https://pastebin.com/raw/xTCH8Gwr'); // Substitua 'URL_DO_SEU_ARQUIVO_JSON' pela URL real do seu arquivo JSON
    const data = await response.json();
         exibirVideosAleatorios(data);
       } catch (error) {
@@ -46,12 +47,14 @@
       const container2 = document.getElementById("video-container2");
       const container3 = document.getElementById("video-container3");
       const container4 = document.getElementById("video-container4");
+      const container4 = document.getElementById("video-container5");
 
       // Limpa os contêineres antes de exibir novos vídeos
       container1.innerHTML = "";
       container2.innerHTML = "";
       container3.innerHTML = "";
       container4.innerHTML = "";
+      container5.innerHTML = "";
 
       // Embaralha a lista de vídeos
       const shuffledVideos = videosList.sort(() => Math.random() - 0.5).slice(0, 4);
@@ -74,6 +77,8 @@
           container3.appendChild(iframe);
         } else if (i === 3) {
           container4.appendChild(iframe);
+        } else if (i === 3) {
+          container5.appendChild(iframe);
         }
       }
     }
