@@ -6,7 +6,7 @@ $user = 'default';
 $password = 'fer272743!';
 
 // Conectar ao banco de dados PostgreSQL
-$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+$conn = pg_connect("host=$host dbname=$dbname user=$user password=$password");
 
 // Verificar conexão
 if (!$conn) {
